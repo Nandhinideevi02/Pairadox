@@ -146,16 +146,6 @@ The workflow is intended to assist developers, not replace their technical judgm
 
 Watch the demo video through this link - https://drive.google.com/file/d/1_31fGvzdJ_K9P2NRS02N8dbLmxpue8K_/view?usp=sharing
 
-**Project Demonstration:** 
-
-The demonstration will showcase:
-- Docker and Switch setup.
-- Telegram integration.
-- Codex agent connection.
-- Investigation request submitted through Telegram.
-- Switch orchestration and agent execution.
-- Evidence-based investigation response.
-
 ## Limitations and Future Improvements
 - The quality of AI-generated findings depends on the accessibility and quality of the underlying project files.
 - AI-generated analysis may contain inaccuracies and requires human verification.
