@@ -180,9 +180,18 @@ All project demonstration videos and supporting screenshots are available here:
 ## About the Team
 
 **Team Name:** PAIRADOX
+## Team Contributions
 
-- **Nandhini Deevi R** 
-- **Lingeshwar G** 
+**Nandhini Deevi R**
+- Project documentation and repository organization.
+- Technical investigation and evaluation of agent-generated findings.
+- README and demonstration preparation.
+
+**Lingeshwar G**
+- Switch and Telegram integration.
+- Codex agent configuration.
+- Project workflow demonstration.
+
 
 **Hackathon:** Flip the Switch Hackathon  
 **Organized by:** WeMakeDevs × DevTools Academy
