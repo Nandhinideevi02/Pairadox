@@ -16,7 +16,7 @@ We explored how AI agents can make this investigation process more collaborative
 
 ## Our Solution
 
-In this workflow we connect team communication with an AI-powered investigation.
+Our workflow connects team communication with an AI-powered investigation.
 
 Instead of manually inspecting every file, team members can submit investigation requests through a connected chat platform.
 
@@ -31,7 +31,7 @@ The workflow emphasizes:
 
 ## Architecture
 
-The workflow consists of the following components:
+Our architecture consists of the following components:
 
 1. **Telegram** – Team communication interface for submitting investigation requests and receiving responses.
 2. **Switch** – Orchestration layer connecting the communication platform with the AI agent.
@@ -69,7 +69,7 @@ The workflow consists of the following components:
 
 ## Investigation Use Cases
 
-We used the telegram group chat and investigated an existing federated learning project, EdgeRetina.
+We used a telegram group chat and investigated an existing federated learning project, EdgeRetina.
 
 The following are examples of investigations conducted through the AI agent.
 
@@ -133,7 +133,7 @@ These investigations demonstrate how an AI agent can help developers understand 
 
 ## Safety and Human Oversight
 
-This Workflow follows a human-reviewed investigation approach.
+This workflow follows a human-reviewed investigation approach.
 
 - Investigation requests focus on inspecting existing project files and reports.
 - Findings should include supporting file references wherever available.
