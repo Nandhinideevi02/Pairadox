@@ -44,7 +44,7 @@ Our architecture consists of the following components:
 
 ### Workflow
 
-<img width="3966" height="164" alt="mermaid-diagram (1)" src="https://github.com/user-attachments/assets/84461aa6-ed7b-4b74-8402-2aea929d4fcf" />
+<img width="3966" height="164" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/84461aa6-ed7b-4b74-8402-2aea929d4fcf" />
 
 ## Investigation Use Cases
 
@@ -142,7 +142,9 @@ The workflow is intended to assist developers, not replace their technical judgm
 6. Invite the agent to the Telegram group.
 7. Send an investigation request through Telegram and review the agent's response.
 
-## Demo - https://drive.google.com/file/d/1_31fGvzdJ_K9P2NRS02N8dbLmxpue8K_/view?usp=sharing (Link)
+## Demo 
+
+Watch the demo video through this link - https://drive.google.com/file/d/1_31fGvzdJ_K9P2NRS02N8dbLmxpue8K_/view?usp=sharing
 
 **Project Demonstration:** 
 
