@@ -122,25 +122,97 @@ This workflow follows a human-reviewed investigation approach.
 
 The workflow is intended to assist developers, not replace their technical judgment.
 
-## Setup and Execution
+## Setup and Reproduction Guide
+
+This section describes how to reproduce the PAIRADOX workflow using Switch Console, Telegram, Codex, and the EdgeRetina research agent.
 
 ### Prerequisites
 
-- Docker Desktop
-- Switch Console
-- Telegram account and bot
-- Codex agent configuration
-- Access to the project repository
+Ensure the following are available:
 
-### Configuration Steps
+- Windows laptop or compatible environment.
+- Docker Desktop.
+- Switch Console (version 0.31.0 used in our implementation).
+- Telegram account.
+- Telegram bot created through BotFather.
+- Codex agent configured and accessible through the Switch environment.
+- EdgeRetina GitHub repository: https://github.com/lingeshwar18/EdgeRetina
 
-1. Install and launch Docker Desktop.
-2. Download and launch Switch Console.
-3. Configure the Telegram bot and connect it to the Switch workspace.
-4. Connect and configure the Codex agent.
-5. Provide the agent with access to the intended project repository.
-6. Invite the agent to the Telegram group.
-7. Send an investigation request through Telegram and review the agent's response.
+### Set Up Switch Console
+
+1. Install and launch Switch Console locally.
+2. Run Switch Core using the default workspace.
+3. Verify that the Switch environment is running.
+4. Ensure the required workspace agents are available.
+
+###  Configure Telegram Integration
+
+1. Open Telegram and create a dedicated bot using BotFather.
+2. Use the `/setprivacy` command in BotFather and disable privacy mode so the bot can process group messages.
+3. Open the Messaging Apps section in Switch Console.
+4. Connect the Telegram bot using its credentials.
+5. Have each team member message the bot directly to register their Telegram account.
+6. Add the bot to the PAIRADOX Telegram group and grant the required administrator permissions.
+7. Link the Telegram group to the Switch workspace.
+
+**Security:** Keep bot tokens and API credentials private. Never include them in the public repository.
+
+### Configure the AI Agents
+
+Our workflow uses the following agents:
+
+- **Codex:** Used for AI-assisted project investigation and technical analysis.
+- **EdgeRetina Research Agent (`@edgeretina-researcher`):** Used to investigate the EdgeRetina project and its implementation.
+- **Switch Buddy Admin (`@switch-buddy-admin`):** Used for Switch-related assistance and workspace administration.
+
+Ensure the required agents are available in the Switch workspace and can participate in the Telegram workflow.
+
+### Provide Access to the EdgeRetina Repository
+
+1. Clone the EdgeRetina repository onto the machine running the research workflow.
+2. Ensure the research agent has access to the local repository files.
+3. Invite the research agent to the Telegram group using:
+
+   `!invite-agent @edgeretina-researcher`
+
+   Alternatively, use:
+
+   `/invite_agent @edgeretina-researcher`
+
+4. Verify that the agent can inspect the relevant project files.
+
+The repository is maintained separately from the public PAIRADOX documentation repository.
+
+### Send and Test an Investigation Request
+
+1. Open the PAIRADOX Telegram group.
+2. Submit an investigation request by mentioning the research agent.
+3. Allow the connected agent workflow to process the request.
+4. Review the response and its supporting evidence in the group.
+
+**Example investigation request:**
+
+`@edgeretina-researcher Investigate why the Severe DR class has zero recall in the saved federated evaluation. Identify the relevant evaluation metrics, confusion matrix, and possible contributing factors. Do not modify any project files.`
+
+A successful investigation should produce:
+
+- Relevant project files or evaluation artifacts inspected.
+- Confirmed observations supported by evidence.
+- Possible explanations clearly distinguished from confirmed findings.
+- A response available for human review in Telegram.
+
+### Human Review and Safety
+
+- Treat agent-generated findings as investigative assistance, not automatically verified conclusions.
+- Check the cited files and metrics before accepting conclusions.
+- Keep investigation operations read-only unless changes are explicitly authorized.
+- Never expose private credentials, tokens, or sensitive configuration files.
+
+### Reproduction Notes
+
+The EdgeRetina project is maintained separately from PAIRADOX. Reproducing the investigation requires access to the EdgeRetina repository and the appropriate local agent configuration.
+
+Exact agent authentication and workspace settings may depend on the local Switch environment.
 
 ## Demo 
 
