@@ -1,7 +1,11 @@
 # PAIRADOX
 ### AI-Powered Collaborative Experiment Investigation Using Switch and Codex
 
-We developed an AI-powered collaborative investigation workflow that connects a team communication platform with an AI coding agent through **Switch**. It enables teams to investigate existing software and machine learning projects through natural-language requests, allowing an AI agent to inspect project files, analyze implementation details, examine experimental results, and report findings with supporting evidence.
+We developed an AI-powered collaborative investigation workflow that connects a team communication platform with an AI coding agent through **Switch**. 
+
+It enables teams to investigate existing software and machine learning projects through natural-language requests, allowing an AI agent to inspect project files, analyze implementation details, examine experimental results, and report findings with supporting evidence.
+
+Unlike a simple conversational interface, PAIRADOX enables an AI agent to investigate actual project files and experimental artifacts, helping teams move from questions to evidence-backed technical findings.
 
 Built for the **Flip the Switch Hackathon** by WeMakeDevs × DevTools Academy.
 
@@ -10,9 +14,8 @@ Built for the **Flip the Switch Hackathon** by WeMakeDevs × DevTools Academy.
 ## Problem Statement
 
 Machine learning projects often involve multiple components, including model architectures, training pipelines, evaluation scripts, datasets, and experimental reports.
-Understanding why a model performs poorly or identifying issues in an existing implementation can require significant manual investigation.
-Teams may spend considerable time navigating project files, comparing experimental results, and tracing implementation logic.
-We explored how AI agents can make this investigation process more collaborative, structured, and efficient.
+
+Understanding why a model performs poorly or identifying issues in an existing implementation can require significant manual investigation. Teams may spend considerable time navigating project files, comparing experimental results, and tracing implementation logic. We explored how AI agents can make this investigation process more collaborative, structured, and efficient.
 
 ## Our Solution
 
@@ -41,35 +44,11 @@ Our architecture consists of the following components:
 
 ### Workflow
 
-```text
-       Team Members
-             |
-             v
-         Telegram
-             |
-             v
-           Switch
-        (Orchestration)
-             |
-             v
-        Codex Agent
-             |
-             v
-     EdgeRetina Project
-             |
-             v
-   Investigation & Analysis
-             |
-             v
-    Evidence-Based Report
-             |
-             v
-       Human Review
-```
+<img width="3966" height="164" alt="mermaid-diagram (1)" src="https://github.com/user-attachments/assets/84461aa6-ed7b-4b74-8402-2aea929d4fcf" />
 
 ## Investigation Use Cases
 
-We used a telegram group chat and investigated an existing federated learning project, EdgeRetina.
+We used a Telegram group chat and investigated an existing federated learning project, EdgeRetina.
 
 The following are examples of investigations conducted through the AI agent.
 
@@ -85,7 +64,7 @@ Key reported findings:
 - The starting global checkpoint also showed zero Severe DR recall.
 - The federated training configuration used categorical cross-entropy without class weighting.
 
-The investigation identified possible contributing factors, including class imbalance and the existing model's decision boundaries.
+The investigation identified potential contributing factors, including class imbalance, inherited model limitations, and training configuration. These remain hypotheses requiring controlled experiments for confirmation.
 
 ### 2. Centralized vs Federated Learning Comparison
 
@@ -101,7 +80,7 @@ The agent inspected saved evaluation reports and compared their metrics.
 | Macro Recall | 0.3598 | 0.4032 |
 | QWK | 0.4889 | 0.6867 |
 
-**Important observation:** Although the saved federated evaluation showed improvements in aggregate metrics, Severe DR recall remained zero. The comparison also had experimental limitations because the training procedures were not identical.
+The federated model was fine-tuned from an existing global checkpoint, and the two training procedures were not identical. Therefore, the observed improvements cannot be attributed to federated learning alone.
 
 ### 3. Federated Averaging Implementation Analysis
 
@@ -113,7 +92,7 @@ Key reported findings:
 - The project uses four simulated clients.
 - Local model updates are aggregated using sample-count-based weights.
 - The recorded training configuration used five federated rounds.
-- The implementation's FedAvg arithmetic was structurally consistent with weighted averaging.
+- The inspected implementation used sample-count-based weighting, consistent with the standard FedAvg aggregation formula on its normal execution path.
 - The investigation identified areas for further validation, including update diagnostics, input validation, and per-round evaluation monitoring.
 
 These investigations demonstrate how an AI agent can help developers understand existing implementations and identify areas requiring further experimentation.
@@ -126,7 +105,7 @@ These investigations demonstrate how an AI agent can help developers understand 
 |---|---|
 | Communication | Telegram |
 | Orchestration | Switch |
-| AI Coding Agent | OpenAI Codex |
+| AI Coding Agent | Codex |
 | Containerization | Docker |
 | Investigation Target | EdgeRetina |
 | Version Control | Git and GitHub |
@@ -145,29 +124,27 @@ The workflow is intended to assist developers, not replace their technical judgm
 
 ## Setup and Execution
 
-The following components are required:
+### Prerequisites
 
 - Docker Desktop
-- Switch
-- Telegram
+- Switch Console
+- Telegram account and bot
 - Codex agent configuration
-- Access to the project repository being investigated
+- Access to the project repository
 
-### General Workflow
+### Configuration Steps
 
-1. Install and configure Docker Desktop.
-2. Set up and launch Switch.
-3. Configure the Telegram integration.
-4. Connect the Codex agent through Switch.
+1. Install and launch Docker Desktop.
+2. Download and launch Switch Console.
+3. Configure the Telegram bot and connect it to the Switch workspace.
+4. Connect and configure the Codex agent.
 5. Provide the agent with access to the intended project repository.
-6. Submit an investigation request through Telegram.
-7. Review the agent's response and supporting evidence.
+6. Invite the agent to the Telegram group.
+7. Send an investigation request through Telegram and review the agent's response.
 
-**TODO:** Add the exact installation instructions, configuration steps, and verified commands used by the team.
+## Demo - https://drive.google.com/file/d/1_31fGvzdJ_K9P2NRS02N8dbLmxpue8K_/view?usp=sharing (Link)
 
-## Demo
-
-**Project Demonstration:** TODO – (Add demo video link.)
+**Project Demonstration:** 
 
 The demonstration will showcase:
 - Docker and Switch setup.
@@ -183,6 +160,21 @@ The demonstration will showcase:
 - Experimental observations should be validated through controlled experiments before drawing conclusions.
 - The current workflow focuses on investigation and analysis; automated implementation and validation of suggested improvements are areas for future development.
 
+## Documentation
+
+Explore the detailed project documentation:
+
+- [System Architecture](docs/architecture.md)
+- [Workflow and Execution](docs/workflow.md)
+- [Technical Investigation Reports](docs/investigations.md)
+
+## Demo and Project Evidence
+
+All project demonstration videos and supporting screenshots are available here:
+
+[PAIRADOX – Demo Videos and Screenshots](https://drive.google.com/drive/folders/19fdqkvn2J2sjI3KxXver09os-Vp59W85?usp=sharing)
+
+
 ## About the Team
 
 **Team Name:** PAIRADOX
@@ -195,4 +187,4 @@ The demonstration will showcase:
 
 ---
 
-*PAIRADOX — Turning team conversations into structured technical investigations.*
+*Turning team conversations into structured technical investigations.*
