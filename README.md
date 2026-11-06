@@ -165,7 +165,7 @@ The following components are required:
 
 **TODO:** Add the exact installation instructions, configuration steps, and verified commands used by the team.
 
-## 🎥 Demo
+## Demo
 
 **Project Demonstration:** TODO – (Add demo video link.)
 
