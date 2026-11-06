@@ -1,42 +1,37 @@
 # PAIRADOX
 ### AI-Powered Collaborative Experiment Investigation Using Switch and Codex
 
-PAIRADOX is an AI-powered collaborative investigation workflow that connects a team communication platform with an AI coding agent through **Switch**.
-
-It enables teams to investigate existing software and machine learning projects through natural-language requests, allowing an AI agent to inspect project files, analyze implementation details, examine experimental results, and report findings with supporting evidence.
+We developed an AI-powered collaborative investigation workflow that connects a team communication platform with an AI coding agent through **Switch**. It enables teams to investigate existing software and machine learning projects through natural-language requests, allowing an AI agent to inspect project files, analyze implementation details, examine experimental results, and report findings with supporting evidence.
 
 Built for the **Flip the Switch Hackathon** by WeMakeDevs × DevTools Academy.
 
 ---
 
-## 🚀 Problem Statement
+## Problem Statement
 
 Machine learning projects often involve multiple components, including model architectures, training pipelines, evaluation scripts, datasets, and experimental reports.
-
 Understanding why a model performs poorly or identifying issues in an existing implementation can require significant manual investigation.
-
 Teams may spend considerable time navigating project files, comparing experimental results, and tracing implementation logic.
+We explored how AI agents can make this investigation process more collaborative, structured, and efficient.
 
-PAIRADOX explores how AI agents can make this investigation process more collaborative, structured, and efficient.
+## Our Solution
 
-## 💡 Our Solution
-
-PAIRADOX connects team communication with an AI-powered investigation workflow.
+In this workflow we connect team communication with an AI-powered investigation.
 
 Instead of manually inspecting every file, team members can submit investigation requests through a connected chat platform.
 
 Through Switch, requests are routed to an AI coding agent powered by Codex, which can inspect the accessible project repository and return structured findings.
 
 The workflow emphasizes:
-- Natural-language investigation requests.
-- AI-assisted code and experiment analysis.
-- Evidence-backed findings with relevant file references.
-- Clear separation between confirmed observations and hypotheses.
-- Human review before implementation changes.
+1. Natural-language investigation requests.
+2. AI-assisted code and experiment analysis.
+3. Evidence-backed findings with relevant file references.
+4. Clear separation between confirmed observations and hypotheses.
+5. Human review before implementation changes.
 
-## 🏗️ Architecture
+## Architecture
 
-The PAIRADOX workflow consists of the following components:
+The workflow consists of the following components:
 
 1. **Telegram** – Team communication interface for submitting investigation requests and receiving responses.
 2. **Switch** – Orchestration layer connecting the communication platform with the AI agent.
@@ -72,9 +67,9 @@ The PAIRADOX workflow consists of the following components:
        Human Review
 ```
 
-## 🔬 Investigation Use Cases
+## Investigation Use Cases
 
-We used PAIRADOX to investigate an existing federated learning project, EdgeRetina.
+We used the telegram group chat and investigated an existing federated learning project, EdgeRetina.
 
 The following are examples of investigations conducted through the AI agent.
 
@@ -125,7 +120,7 @@ These investigations demonstrate how an AI agent can help developers understand 
 
 *Note: The investigation findings are based on the saved project artifacts and agent inspection. They are not claims of independent clinical validation or proof of causation.*
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Component | Technology |
 |---|---|
@@ -136,9 +131,9 @@ These investigations demonstrate how an AI agent can help developers understand 
 | Investigation Target | EdgeRetina |
 | Version Control | Git and GitHub |
 
-## 🔐 Safety and Human Oversight
+## Safety and Human Oversight
 
-PAIRADOX follows a human-reviewed investigation approach.
+This Workflow follows a human-reviewed investigation approach.
 
 - Investigation requests focus on inspecting existing project files and reports.
 - Findings should include supporting file references wherever available.
@@ -148,7 +143,7 @@ PAIRADOX follows a human-reviewed investigation approach.
 
 The workflow is intended to assist developers, not replace their technical judgment.
 
-## ⚙️ Setup and Execution
+## Setup and Execution
 
 The following components are required:
 
@@ -172,7 +167,7 @@ The following components are required:
 
 ## 🎥 Demo
 
-**Project Demonstration:** TODO – Add demo video link.
+**Project Demonstration:** TODO – (Add demo video link.)
 
 The demonstration will showcase:
 - Docker and Switch setup.
@@ -182,20 +177,18 @@ The demonstration will showcase:
 - Switch orchestration and agent execution.
 - Evidence-based investigation response.
 
-## ⚠️ Limitations
+## Limitations and Future Improvements
+- The quality of AI-generated findings depends on the accessibility and quality of the underlying project files.
+- AI-generated analysis may contain inaccuracies and requires human verification.
+- Experimental observations should be validated through controlled experiments before drawing conclusions.
+- The current workflow focuses on investigation and analysis; automated implementation and validation of suggested improvements are areas for future development.
 
-- Investigation quality depends on the accessibility and quality of the underlying project files.
-- AI-generated findings require human verification.
-- Experimental observations do not establish causation without controlled experiments.
-- PAIRADOX is an investigation workflow, not a clinical diagnostic system.
-- The underlying EdgeRetina project has its own research and experimental limitations.
-
-## 👥 Team
+## About the Team
 
 **Team Name:** PAIRADOX
 
-- **Nandhini** – Team Member
-- **Linga** – Team Member
+- **Nandhini Deevi R** 
+- **Lingeshwar G** 
 
 **Hackathon:** Flip the Switch Hackathon  
 **Organized by:** WeMakeDevs × DevTools Academy
